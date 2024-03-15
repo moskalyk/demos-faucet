@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import paper from './paper.jpg'
 import {useTheme} from '@0xsequence/design-system'
 import { useOpenConnectModal } from '@0xsequence/kit';
 
@@ -7,8 +6,6 @@ import './App.css'
 import {
   useDisconnect,
   useAccount,
-  useWalletClient,
-  useSendTransaction,
 } from 'wagmi';
 
 import {Button, Spinner, Box } from '@0xsequence/design-system'
@@ -23,8 +20,6 @@ const App = () => {
 
   setTheme('light')
   console.log(process.env.REACT_APP_projectAccessKey)
-  const viewSize = 1000; // Viewbox size, adjust based on your needs
-
   const onClick = () => {
     setOpenConnectModal(true);
     console.log(document.getElementById('container'))
