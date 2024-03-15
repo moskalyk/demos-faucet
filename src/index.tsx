@@ -7,7 +7,7 @@ import { getDefaultWaasConnectors } from '@0xsequence/kit-connectors';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createConfig, http, WagmiProvider } from 'wagmi';
 import { mainnet, polygon, arbitrumSepolia, Chain } from 'wagmi/chains';
-import {ENV} from './env.js'
+import {ENV} from './env.example.js'
 
 const queryClient = new QueryClient();
 
