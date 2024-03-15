@@ -12,15 +12,14 @@ import {ENV} from './env.example.js'
 const queryClient = new QueryClient();
 
 const chains: any = [mainnet, arbitrumSepolia];
-const projectAccessKey = process.env.REACT_APP_PROJECTACCESSKEY;
-const waasConfigKey = ENV.waasConfigKey;
-const googleClientId = ENV.googleClientId;
-const appleClientId = ENV.appleClientId;
+const projectAccessKey = process.env.REACT_APP_PROJECTACCESSKEY!;
+const waasConfigKey =  process.env.REACT_APP_waasConfigKey!;
+const googleClientId =  process.env.REACT_APP_googleClientId!;
+const appleClientId =  process.env.REACT_APP_appleClientId!;
 
 // TODO: update this
 const appleRedirectURI = '';
 
-console.log(process.env)
 
 function Dapp(props: any) {
   const connectors = [
