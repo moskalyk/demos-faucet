@@ -12,7 +12,7 @@ import {ENV} from './env.example.js'
 const queryClient = new QueryClient();
 
 const chains: any = [mainnet, arbitrumSepolia];
-const projectAccessKey = ENV.projectAccessKey;
+const projectAccessKey = process.env.REACT_APP_PROJECTACCESSKEY;
 const waasConfigKey = ENV.waasConfigKey;
 const googleClientId = ENV.googleClientId;
 const appleClientId = ENV.appleClientId;
