@@ -1,0 +1,53 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master # Adjust branch name as needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build webpack
+        env:
+          REACT_APP_projectAccessKey: ${{ secrets.PROJECTACCESSKEY }}
+          REACT_APP_waasConfigKey: ${{ secrets.WAASCONFIGKEY }}
+          REACT_APP_projectId: ${{ secrets.PROJECTID }}
+          REACT_APP_walletConnectId: ${{ secrets.WALLETCONNECTID }}
+          REACT_APP_identityPoolId: ${{ secrets.IDENTITYPOOLID }}
+          REACT_APP_emailClientId: ${{ secrets.EMAILCLIENTID }}
+          REACT_APP_googleClientId: ${{ secrets.GOOGLECLIENTID }}
+          REACT_APP_idpRegion: ${{ secrets.IDPREGIONIDPREGION }}
+          REACT_APP_rpcServer: ${{ secrets.RPCSERVER }}
+          REACT_APP_kmsRegion: ${{ secrets.KMSREGION }}
+          REACT_APP_emailRegion: ${{ secrets.EMAILREGION }}
+          REACT_APP_keyId: ${{ secrets.KEYID }}
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/setup-node@v2
+        with:
+          branch: master
+          folder: build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "./build"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
