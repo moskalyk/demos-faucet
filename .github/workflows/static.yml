@@ -26,7 +26,7 @@ jobs:
 
       - name: Build webpack
         env:
-          REACT_APP_projectAccessKey: ${{ secrets.PROJECTACCESSKEY }}
+          REACT_APP_PROJECTACCESSKEY: ${{ secrets.PROJECTACCESSKEY }}
           REACT_APP_waasConfigKey: ${{ secrets.WAASCONFIGKEY }}
           REACT_APP_projectId: ${{ secrets.PROJECTID }}
           REACT_APP_walletConnectId: ${{ secrets.WALLETCONNECTID }}
