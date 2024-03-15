@@ -19,7 +19,6 @@ const App = () => {
   const { disconnect } = useDisconnect();
 
   setTheme('light')
-  console.log(process.env.REACT_APP_projectAccessKey)
   const onClick = () => {
     setOpenConnectModal(true);
     console.log(document.getElementById('container'))

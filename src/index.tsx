@@ -20,6 +20,8 @@ const appleClientId = ENV.appleClientId;
 // TODO: update this
 const appleRedirectURI = '';
 
+console.log(process.env.REACT_APP_projectAccessKey)
+
 function Dapp(props: any) {
   const connectors = [
     ...getDefaultWaasConnectors({
