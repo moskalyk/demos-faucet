@@ -7,7 +7,6 @@ import { getDefaultWaasConnectors } from '@0xsequence/kit-connectors';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createConfig, http, WagmiProvider } from 'wagmi';
 import { mainnet, arbitrumSepolia } from 'wagmi/chains';
-import {ENV} from './env.example.js'
 
 const queryClient = new QueryClient();
 
@@ -24,7 +23,7 @@ const appleRedirectURI = '';
 function Dapp(props: any) {
   const connectors = [
     ...getDefaultWaasConnectors({
-      walletConnectProjectId: ENV.walletConnectId,
+      walletConnectProjectId: process.env.REACT_APP_walletConnectProjectId,
       defaultChainId: 421614,
       waasConfigKey,
       googleClientId,
