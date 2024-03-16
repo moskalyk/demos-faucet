@@ -328,11 +328,11 @@ button {
 }
 
 .face--key-o1 {
-  background: #FFA28E;
+  background: plum;
 }
 
 .face--key-o2 {
-  background-image: linear-gradient(to bottom, #bc7377, #B46266);
+  background-image: linear-gradient(to bottom, plum, plum);
 }
 
 .face--key-o3 {

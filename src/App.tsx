@@ -55,7 +55,7 @@ const App = () => {
   return(
       <div className='App'>
         <div className="rotating-coin">
-          <p>꩜</p>
+          <p>⌨</p>
         </div>
         
 <div className="main flex" id="m">
