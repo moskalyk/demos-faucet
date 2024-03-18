@@ -18,7 +18,7 @@ const appleClientId =  process.env.REACT_APP_appleClientId!;
 
 // TODO: update this
 const appleRedirectURI = '';
-
+console.log(process.env)
 
 function Dapp(props: any) {
   const connectors = [
