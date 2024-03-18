@@ -21,7 +21,7 @@ const appleRedirectURI = '';
 function Dapp(props: any) {
   const connectors = [
     ...getDefaultWaasConnectors({
-      walletConnectProjectId: process.env.REACT_APP_walletConnectProjectId!,
+      walletConnectProjectId: process.env.REACT_APP_walletConnectId!,
       defaultChainId: 421614,
       waasConfigKey,
       googleClientId,
