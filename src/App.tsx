@@ -30,6 +30,7 @@ const App = () => {
     setIsMinting(true)
     // Create the fetch request
     const res = await fetch('https://tiny-rice-1049.tpin.workers.dev', {
+      // const res = await fetch('http://localhost:8787', {
       method: 'POST', // Specify the method
       headers: {
         'Content-Type': 'application/json', // Specify the content type as JSON
@@ -42,14 +43,6 @@ const App = () => {
 
     console.log(await res.text())
     setIsMinting(false)
-
-    // .then(response => response.json()) // Parse the JSON response
-    // .then(data => {
-    //   console.log('Success:', data); // Handle success
-    // })
-    // .catch((error) => {
-    //   console.error('Error:', error); // Handle errors
-    // });
   }
 
   return(

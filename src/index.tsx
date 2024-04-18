@@ -17,7 +17,8 @@ const googleClientId =  process.env.REACT_APP_googleClientId!;
 const appleClientId =  process.env.REACT_APP_appleClientId!;
 
 // TODO: update this
-const appleRedirectURI = '';
+const appleRedirectURI = 'https://' + window.location.host
+
 function Dapp(props: any) {
   const connectors = [
     ...getDefaultWaasConnectors({
