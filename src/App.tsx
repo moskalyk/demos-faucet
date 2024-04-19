@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {useTheme} from '@0xsequence/design-system'
 import { useOpenConnectModal } from '@0xsequence/kit';
 
