@@ -580,12 +580,14 @@ const App = () => {
         <br/>
         {!isConnected ? (
           <div
-            style={{ cursor: 'pointer', position: 'fixed', bottom: '20vh' }}
+            style={{ cursor: 'pointer', position: 'fixed', bottom: '10vh', left: '50%', transform: 'translate(-50%, -50%)' }}
             onClick={() => onClick()}
           >
             Click to login
           </div>
-        ) : isMinting ? <div style={{ position: 'fixed', bottom: '20vh' }}><Box><Spinner/></Box> </div>: <Button label="claim" height="9" onClick={() => mint()}/>}
+        ) : isMinting ? <div 
+        style={{ cursor: 'pointer', position: 'fixed', bottom: '10vh', left: '50%', transform: 'translate(-50%, -50%)' }}
+        ><Box><Spinner/></Box> </div>: <Button label="claim" height="9" onClick={() => mint()}/>}
         <br/>
         <br/>
         <br/>
